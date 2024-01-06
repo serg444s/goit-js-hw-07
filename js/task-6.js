@@ -9,14 +9,14 @@ const inputNumber = document.querySelector('input[type="number"]');
 inputNumber.name = "number";
 const btnCreate = document.querySelector("button[data-create]");
 const btnDestroy = document.querySelector("button[data-destroy]");
-let width = 20;
-let height = 20;
+let localSize = 30;
 
 function createBoxes(amount) {
-  for (let i = 1; i <= amount; i++) {
+  destroyBoxes();
+  for (let i = 0; i <= amount; i++) {
     const box = document.createElement("div");
-    box.style.width = `${(width += 10)}px`;
-    box.style.height = `${(height += 10)}px`;
+    box.style.width = `${localSize + i * 10}px`;
+    box.style.height = `${localSize + i * 10}px`;
     box.style.backgroundColor = getRandomHexColor();
     divBoxes.append(box);
     inputNumber.value = "";
@@ -25,8 +25,7 @@ function createBoxes(amount) {
 
 function destroyBoxes() {
   divBoxes.innerHTML = "";
-  width = 20;
-  height = 20;
+  localSize = 30;
 }
 
 btnCreate.addEventListener("click", () => {
