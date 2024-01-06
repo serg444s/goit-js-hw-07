@@ -13,7 +13,7 @@ const btnDestroy = document.querySelector("button[data-destroy]");
 function createBoxes(amount) {
   destroyBoxes();
   let localSize = 30;
-  for (let i = 1; i <= amount; i++) {
+  for (let i = 0; i < amount; i++) {
     const box = document.createElement("div");
     box.style.width = `${localSize + i * 10}px`;
     box.style.height = `${localSize + i * 10}px`;
