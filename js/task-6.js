@@ -9,7 +9,6 @@ const inputNumber = document.querySelector('input[type="number"]');
 inputNumber.name = "number";
 const btnCreate = document.querySelector("button[data-create]");
 const btnDestroy = document.querySelector("button[data-destroy]");
-let localSize = 30;
 
 function createBoxes(amount) {
   destroyBoxes();
