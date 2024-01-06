@@ -13,7 +13,8 @@ let localSize = 30;
 
 function createBoxes(amount) {
   destroyBoxes();
-  for (let i = 0; i <= amount; i++) {
+  let localSize = 30;
+  for (let i = 0; i < amount; i++) {
     const box = document.createElement("div");
     box.style.width = `${localSize + i * 10}px`;
     box.style.height = `${localSize + i * 10}px`;
@@ -25,7 +26,6 @@ function createBoxes(amount) {
 
 function destroyBoxes() {
   divBoxes.innerHTML = "";
-  localSize = 30;
 }
 
 btnCreate.addEventListener("click", () => {
